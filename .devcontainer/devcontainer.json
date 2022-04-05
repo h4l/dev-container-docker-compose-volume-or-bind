@@ -1,0 +1,17 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+    "name": "Dev Container - Docker Compose Volume or Bind Example",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "example-devcontainer",
+    "workspaceFolder": "/workspace",
+    // Generate .devcontainer/.env containing WORKSPACE_* envars for docker-compose.yml
+    "initializeCommand": ".devcontainer/gen-docker-compose-workspace-env.sh --container-workspace-folder '${containerWorkspaceFolder}' --local-workspace-folder '${localWorkspaceFolder}'",
+
+    // General properties unrelated to the example follow...
+    "remoteUser": "vscode",
+    "extensions": [
+        "editorconfig.editorconfig",
+        "streetsidesoftware.code-spell-checker",
+        "timonwong.shellcheck",
+    ]
+}
