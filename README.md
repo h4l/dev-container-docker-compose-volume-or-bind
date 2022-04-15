@@ -59,8 +59,8 @@ The key parts are:
     ```yaml
     volumes:
       devcontainer-volume:
-        name: ${WORKSPACE_CONTAINER_VOLUME_SOURCE}
-        external: true
+        name: ${WORKSPACE_CONTAINER_VOLUME_SOURCE:-not-used-in-bind-mount-workspace}
+        external: ${WORKSPACE_IS_CONTAINER_VOLUME:?}
     ```
 
 ## Compatibility

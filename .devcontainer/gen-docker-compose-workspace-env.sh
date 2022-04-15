@@ -128,8 +128,8 @@ and including references to the envars it generates in your docker-compose.yaml:
 
   volumes:
     devcontainer-volume:
-      name: ${WORKSPACE_CONTAINER_VOLUME_SOURCE:?-devcontainer-volume_not-used-in-bind-mount-workspace}
-      external: ${WORKSPACE_IS_CONTAINER_VOLUME}
+      name: ${WORKSPACE_CONTAINER_VOLUME_SOURCE:-not-used-in-bind-mount-workspace}
+      external: ${WORKSPACE_IS_CONTAINER_VOLUME:?}
 EOF
 )"
 

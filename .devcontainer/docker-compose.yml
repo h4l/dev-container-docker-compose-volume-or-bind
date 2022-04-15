@@ -24,7 +24,9 @@ services:
       - ${WORKSPACE_SOURCE:?}:${WORKSPACE_TARGET:?}
 
 volumes:
-  # $WORKSPACE_SOURCE is "devcontainer-volume" when the workspace is in a volume
+  # $WORKSPACE_SOURCE is "devcontainer-volume" when the workspace is in a
+  # volume, and devcontainer-volume is an alias for the actual external volume.
+  # In bind-mount workspaces, it's an empty, unused volume created by compose.
   devcontainer-volume:
-    name: ${WORKSPACE_CONTAINER_VOLUME_SOURCE}
-    external: true
+    name: ${WORKSPACE_CONTAINER_VOLUME_SOURCE:-not-used-in-bind-mount-workspace}
+    external: ${WORKSPACE_IS_CONTAINER_VOLUME:?}
