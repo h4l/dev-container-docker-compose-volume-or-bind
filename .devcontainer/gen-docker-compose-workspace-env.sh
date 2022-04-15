@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Copyright 2022 Hal Blackburn. MIT License.
-VERSION="gen-docker-compose-workspace-env.sh version 1.0.0
+VERSION="gen-docker-compose-workspace-env.sh version 1.0.1
 
-https://github.com/h4l/dev-container-docker-compose-volume-or-bind/tree/v1.0.0
+https://github.com/h4l/dev-container-docker-compose-volume-or-bind/tree/v1.0.1
 
-Tested with Remote Containers plugin version 0.232.3 (2022-04-04)
+Tested with Remote Containers plugin version 0.232.3 - 0.232.6.
 Future updates may break compatability."
 
 set -eu -o pipefail
