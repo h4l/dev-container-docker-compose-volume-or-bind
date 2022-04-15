@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright 2022 Hal Blackburn. MIT License.
 VERSION="gen-docker-compose-workspace-env.sh version 1.0.0
 
 https://github.com/h4l/dev-container-docker-compose-volume-or-bind/tree/v1.0.0
