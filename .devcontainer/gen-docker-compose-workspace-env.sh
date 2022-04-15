@@ -241,8 +241,8 @@ if workspace_is_in_container_volume; then
   }
 
   WORKSPACE_CONTAINER_VOLUME_TARGET="$(dirname "${LOCAL_WORKSPACE_FOLDER:?}")"
-  # The 'devcontainer-volume' volume is defined in docker-compose-workspace-volume.yml
-  # as an external volume using the value of WORKSPACE_BIND_MOUNT_SOURCE.
+  # The 'devcontainer-volume' volume is defined in docker-compose.yml
+  # as an external volume using the value of WORKSPACE_CONTAINER_VOLUME_SOURCE.
   WORKSPACE_SOURCE="devcontainer-volume"
   WORKSPACE_TARGET="$WORKSPACE_CONTAINER_VOLUME_TARGET"
   WORKSPACE_ROOT="${LOCAL_WORKSPACE_FOLDER?:}"
