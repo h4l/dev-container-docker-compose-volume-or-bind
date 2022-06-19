@@ -36,7 +36,9 @@ volumes and bind mounts in Docker Compose services.
 
 To use it in your own project, copy the `.devcontainer` directory from this
 repository into your project and edit the `devcontainer.json` and
-`docker-compose.yml` as required.
+`docker-compose.yml` as required. Make sure the
+`.devcontainer/gen-docker-compose-workspace-env.sh` script is marked executable
+(`chmod +x ...`).
 
 The key parts are:
 
